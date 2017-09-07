@@ -1,2 +1,2 @@
 # ansible
-Testing Infrastructure as Code with Ansible
+This repository is created for testing purposes of Infrastructure as Code with Ansible
