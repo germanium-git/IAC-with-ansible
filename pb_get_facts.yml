@@ -1,0 +1,18 @@
+---
+ - name: Gathering facts from network devices
+   hosts: all
+   connection: local
+   gather_facts: no
+   tasks:
+   - name: collect default set of facts and configuration
+     junos_facts:
+       gather_subset: config
+       config_format: text
+       provider:
+         username: admin
+         timeout: 60
+         port: 22
+     register: result
+
+   - debug:
+       var: result
